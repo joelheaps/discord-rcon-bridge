@@ -1,0 +1,10 @@
+---
+version: "3"
+services:
+  bridge:
+    restart: always
+    build:
+      context: "."
+      dockerfile: "Dockerfile"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
